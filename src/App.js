@@ -1,6 +1,6 @@
 import React from 'react';
-import { Layout } from './components';
+import { Button } from './components';
 
-const App = () => <Layout />;
+const App = () => <Button color="info">test</Button>;
 
 export default App;
