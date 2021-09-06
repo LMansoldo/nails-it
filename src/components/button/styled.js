@@ -24,20 +24,12 @@ const handleColor = (color) => {
 	switch (color) {
 		case 'success':
 			return `
-			    background: rgb(61 232 74);
-    			background: linear-gradient( 
-						60deg
-						, rgb(61 232 74) 17%, rgb(127 255 62) 85% );
-					color: #fff;
-					
+			    background: rgb(61 232 74);			
 						&:hover {
 							background: rgba(61, 232, 74, 0.8);
 						}`;
 		case 'warning':
 			return `background: rgb(252 120 65);
-					background: linear-gradient( 
-						60deg
-						, rgb(252 120 65) 17%, rgb(255 205 62) 85% );
 					color: #fff;
 
 						&:hover {
@@ -45,23 +37,17 @@ const handleColor = (color) => {
 						}`;
 		case 'error':
 			return `background: rgb(252 137 65);
-    			background: linear-gradient( 
-						60deg
-					, rgb(252 137 65) 17%, rgb(243 31 31) 85% );
 					color: #fff;
 					
 						&:hover {
 							background: rgba(252, 137, 65, 0.8);
 						}`;
 		case 'info':
-			return `background: rgb(0 114 255);
-					background: linear-gradient( 
-						60deg
-					, rgb(0 114 255) 17%,rgb(93 166 255) 85% );
+			return `background: #725CAD;
 					color: #fff;
 					
 						&:hover {
-							background: rgba(0, 114, 255, 0.6);
+							background: #8E7DBE;
 						}`;
 		default:
 			return `background: rgb(239 239 239);
