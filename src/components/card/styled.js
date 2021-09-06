@@ -42,12 +42,8 @@ const hideIn = keyframes`
 
 export const CardWrapper = styled.div`
 	display: flex;
-	flex-direction: column;
-	border: 2px solid #e3e3e3;
-	border-radius: 7px;
+	border-top: 2px solid #e3e3e3;
 	padding: 20px;
-	-webkit-box-shadow: 3px 0px 10px -8px #828282;
-	box-shadow: 3px 0px 10px -8px #828282;
 	background: #fff;
 	margin: 40px 0;
 `;
