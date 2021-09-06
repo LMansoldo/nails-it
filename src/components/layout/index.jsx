@@ -1,8 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types'
 
-const Layout = (props) => <div>mock</div>;
+const Layout = props => {
+	return (
+		<div>
+			
+		</div>
+	)
+}
 
-Layout.propTypes = {};
+Layout.propTypes = {
 
-export default Layout;
+}
+
+export default Layout
