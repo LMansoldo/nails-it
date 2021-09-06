@@ -1,5 +1,5 @@
 import React from 'react';
-import { screen, render } from '../../../tests';
+import { screen, render } from '../../tests';
 import Card from './index';
 
 /*

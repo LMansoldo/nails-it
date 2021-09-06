@@ -13,9 +13,7 @@ import {
 
 const Card = ({ postTitle, timestamp, author, url, img, domain }) => (
 	<CardWrapper>
-		<ImgWrapper>
-			<img src={img} alt={postTitle} />
-		</ImgWrapper>
+		<ImgWrapper pic={img} />
 		<TextWrapper>
 			<PostTitle>
 				<a href={url}>{postTitle}</a>
