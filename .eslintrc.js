@@ -25,7 +25,6 @@ module.exports = {
 			{ jsxSingleQuote: true },
 		],
 		'react/jsx-filename-extension': ['warn', { extensions: ['.jsx', '.js'] }],
-		'react/react-in-jsx-scope': 'off',
 		'import/prefer-default-export': 'off',
 		'consistent-return': 'off',
 		'no-use-before-define': 'off',
