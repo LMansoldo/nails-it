@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Card from '../card';
+import { Card, Header } from '../index';
 import request from '../../services/api';
 
 import { Container } from './styles';
@@ -28,19 +28,22 @@ const Layout = () => {
 	}, [limit, subType]);
 
 	return (
-		<Container>
-			{data.map((item, index) => (
-				<Card
-					key={index}
-					postTitle={item.title}
-					timestamp={getSpendHours(item.created_utc)}
-					author={item.author}
-					url={item.full_link}
-					domain={item.domain}
-					img={item.thumbnail}
-				/>
-			))}
-		</Container>
+		<>
+			<Header />
+			<Container>
+				{data.map((item, index) => (
+					<Card
+						key={index}
+						postTitle={item.title}
+						timestamp={getSpendHours(item.created_utc)}
+						author={item.author}
+						url={item.full_link}
+						domain={item.domain}
+						img={item.thumbnail}
+					/>
+				))}
+			</Container>
+		</>
 	);
 };
 
