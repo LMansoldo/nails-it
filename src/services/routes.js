@@ -10,6 +10,20 @@ const ContentProviders = () => [
 		component: () => <SubredditList />,
 		anchors: [],
 	},
+	{
+		title: 'ReactJS',
+		prefixUrlMatch: 'new',
+		path: '/new',
+		component: () => <SubredditList />,
+		anchors: [],
+	},
+	{
+		title: 'ReactJS',
+		prefixUrlMatch: 'rising',
+		path: '/rising',
+		component: () => <SubredditList />,
+		anchors: [],
+	},
 ];
 
 export default ContentProviders;
