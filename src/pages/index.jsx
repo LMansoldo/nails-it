@@ -2,16 +2,16 @@ import React, { useState, useEffect } from 'react';
 import LinearProgress from '@material-ui/core/LinearProgress';
 import { useLocation } from 'react-router-dom';
 import request from '../services/api';
-import { Card, Filter } from '../components';
+import { Card, Filter, Button } from '../components';
 
 const SubredditList = () => {
 	const location = useLocation();
-	const [limit] = useState('10');
+	const [limit, setLimit] = useState(5);
 	const [subredditData, setSubredditData] = useState([{}]);
 
 	const handleGetSubs = async () => {
 		const res = await request(`${location.pathname}.json?sort=new`);
-		return setSubredditData(res.data.children);
+		return setSubredditData(res.data.children.splice(0, limit));
 	};
 
 	useEffect(() => {
@@ -36,6 +36,15 @@ const SubredditList = () => {
 					/>
 				);
 			})}
+			<Button
+				style={{ width: '90%', margin: '15px auto' }}
+				onClick={() => setLimit(limit + 5)}
+				size="medium"
+				color="info"
+			>
+				{' '}
+				+ ver mais
+			</Button>
 		</>
 	);
 };
