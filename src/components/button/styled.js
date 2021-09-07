@@ -7,7 +7,7 @@ const handleSize = (size) => {
     min-width: 80px;`;
 		case 'medium':
 			return `height: 40px;
-    min-width: 100px;`;
+    min-width: 130px;`;
 		case 'large':
 			return `height: 56px;
     min-width: 120px;`;
@@ -50,11 +50,12 @@ const handleColor = (color) => {
 							background: #8E7DBE;
 						}`;
 		default:
-			return `background: rgb(239 239 239);
-					color: rgb(47 47 47);
+			return `background: #a7b0be;
+					color: #fff;
 										
 						&:hover {
 							background: rgba(239, 239, 239, 0.3);
+							color: #a7b0be;
 						}`;
 	}
 };
@@ -64,7 +65,7 @@ export const ButtonWrapper = styled.button`
 	justify-content: center;
 	align-items: center;
 	border: 0px solid transparent;
-	border-radius: 10px;
+	border-radius: 5px;
 	${(props) => handleColor(props.color)}
 	-webkit-box-shadow: -1px 1px 7px 0px #c7c7c7;
 	box-shadow: -1px 1px 7px 0px #c7c7c7;
