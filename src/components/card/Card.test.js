@@ -2,18 +2,24 @@ import React from 'react';
 import { screen, render } from '../../tests';
 import Card from './index';
 
-/*
-		1 - Deve renderizar fechado
-		2 - Deve exibir descrição limitada a 140 caracteres
-		3 - Deve exibir Descrição completa e naves
-	*/
+// 1 - Card deverá renderizar todas as props corretamente;
+
 
 describe('Card', () => {
-	it('Should start closed', () => {
+	it('Should load data', () => {
 		render(
-			<Card postTitle="Good" timestamp="6" author="me" url="aaaaaaaa" img="" />
+			<Card
+				postTitle="title"
+				timestamp={19}
+				author="author"
+				url="http://link.com"
+				domain="link.com"
+				img="default"
+			/>
 		);
 
-		expect(screen.queryByTestId('description')).not.toBeInTheDocument();
+		expect(screen.queryByText('title')).toBeInTheDocument();
+		expect(screen.queryByText('author')).toBeInTheDocument();
+		expect(screen.queryByText('link.com')).toBeInTheDocument();
 	});
 });

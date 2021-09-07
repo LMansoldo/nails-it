@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Card } from '../index';
+import Card from '../card';
 import request from '../../services/api';
 
 import { Container } from './styles';

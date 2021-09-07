@@ -28,12 +28,21 @@ const Card = ({ postTitle, timestamp, author, url, img, domain }) => (
 );
 
 Card.propTypes = {
-	postTitle: PropTypes.string.isRequired,
-	timestamp: PropTypes.string.isRequired,
-	author: PropTypes.string.isRequired,
-	url: PropTypes.string.isRequired,
-	img: PropTypes.string.isRequired,
-	domain: PropTypes.string.isRequired,
+	postTitle: PropTypes.string,
+	timestamp: PropTypes.number,
+	author: PropTypes.string,
+	url: PropTypes.string,
+	img: PropTypes.string,
+	domain: PropTypes.string,
+};
+
+Card.defaultProps = {
+	postTitle: '',
+	timestamp: 0,
+	author: '',
+	url: '',
+	img: '',
+	domain: '',
 };
 
 export default Card;

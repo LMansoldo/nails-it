@@ -1,5 +1,5 @@
 import React from 'react';
-import { screen, render, userEvent } from '../../../tests';
+import { screen, render, userEvent } from '../../tests';
 import Button from './index';
 
 describe('Button', () => {
