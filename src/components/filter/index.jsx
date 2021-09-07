@@ -15,18 +15,18 @@ const Filter = () => {
 	};
 
 	const handleActiveLocation = (path) => {
-		if (location.pathname === path) return 'info';
+		if (location.pathname === `/${path}`) return 'info';
 		return null;
 	};
 
 	return (
 		<Wrapper>
-			{AVAILABLE_ROUTES.map(({ path, prefixUrlMatch }, index) => (
+			{AVAILABLE_ROUTES.map(({ prefixUrlMatch }, index) => (
 				<Button
 					key={index}
-					onClick={() => handleClick(path)}
+					onClick={() => handleClick(prefixUrlMatch)}
 					size="medium"
-					color={handleActiveLocation(path)}
+					color={handleActiveLocation(prefixUrlMatch)}
 				>
 					{prefixUrlMatch}
 				</Button>

@@ -6,7 +6,7 @@ const ContentProviders = () => [
 	{
 		title: 'ReactJS',
 		prefixUrlMatch: 'hot',
-		path: '/hot',
+		path: '/',
 		component: () => <SubredditList />,
 		anchors: [],
 	},

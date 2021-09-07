@@ -18,7 +18,6 @@ const App = () => {
 				<Layout>
 					<Switch>
 						<Redirect from="/nails-it/" to="/hot" />
-						<Redirect from="/" to="/hot" />
 						{AVAILABLE_ROUTES.map(({ path, component }, index) => (
 							<Route
 								key={`route-${path}-${index}`}
