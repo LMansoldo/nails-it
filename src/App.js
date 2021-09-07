@@ -17,7 +17,8 @@ const App = () => {
 			<Suspense fallback={<LinearProgress color="secondary" />}>
 				<Layout>
 					<Switch>
-						<Redirect from="/nail-it" to="/hot" />
+						<Redirect from="/nails-it/" to="/hot" />
+						<Redirect from="/" to="/hot" />
 						{AVAILABLE_ROUTES.map(({ path, component }, index) => (
 							<Route
 								key={`route-${path}-${index}`}

@@ -11,6 +11,12 @@ import {
 	ImgWrapper,
 } from './styled';
 
+const getSpendHours = (dateUtc) => {
+	const utcDate = new Date(dateUtc);
+	const dts = utcDate.getUTCDate();
+	return dts;
+};
+
 const Card = ({ postTitle, timestamp, author, url, img, domain }) => (
 	<CardWrapper>
 		<ImgWrapper pic={img} />
@@ -19,7 +25,7 @@ const Card = ({ postTitle, timestamp, author, url, img, domain }) => (
 				<a href={url}>{postTitle}</a>
 			</PostTitle>
 			<TimeStamp>
-				{`enviado há ${timestamp} horas por `}
+				{`enviado há ${getSpendHours(timestamp)} horas por `}
 				<Author>{author}</Author>
 			</TimeStamp>
 			<DomainUrl>{domain}</DomainUrl>
