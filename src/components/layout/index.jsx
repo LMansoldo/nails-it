@@ -1,50 +1,23 @@
-import React, { useState, useEffect } from 'react';
-import { Card, Header } from '../index';
-import request from '../../services/api';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Header } from '../index';
+import Head from './Head';
 
 import { Container } from './styles';
 
-const Layout = () => {
-	const [limit] = useState('10');
-	const [subType] = useState(null);
-	const [data, setData] = useState([{}]);
+const Layout = ({ children }) => (
+	<>
+		<Head
+			title="Nail it"
+			description="Lista fofoqueirinha manicure sobre reactjs - reddit"
+		/>
+		<Header />
+		<Container>{children}</Container>
+	</>
+);
 
-	const handleGetSubs = async () => {
-		const res = await request(
-			`&mode=submissions&subreddit=reactjs&size=${limit}`
-		);
-		// const res = await request(`&subreddit=reactjs&size=${limit}`);
-		return setData(res.data);
-	};
-
-	const getSpendHours = (dateUtc) => {
-		const utcDate = new Date(dateUtc);
-		const dts = utcDate.getUTCDate();
-		return dts;
-	};
-
-	useEffect(() => {
-		handleGetSubs();
-	}, [limit, subType]);
-
-	return (
-		<>
-			<Header />
-			<Container>
-				{data.map((item, index) => (
-					<Card
-						key={index}
-						postTitle={item.title}
-						timestamp={getSpendHours(item.created_utc)}
-						author={item.author}
-						url={item.full_link}
-						domain={item.domain}
-						img={item.thumbnail}
-					/>
-				))}
-			</Container>
-		</>
-	);
+Layout.propTypes = {
+	children: PropTypes.node.isRequired,
 };
 
 export default Layout;
